@@ -56,7 +56,7 @@ export default function SignUpPage() {
         </Button>
 
       </Form>
-      <p></p>
+      <p>{error}</p>
     </Container>
   );
 }
