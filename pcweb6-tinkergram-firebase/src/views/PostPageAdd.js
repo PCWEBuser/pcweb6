@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Button, Container, Form, Image, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Form, Image} from "react-bootstrap";
 import { addDoc, collection } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { auth, db, storage } from "../firebase";
-import { signOut } from "firebase/auth";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Navigation from "../components/navigation";
 
