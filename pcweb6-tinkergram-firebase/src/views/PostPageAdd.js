@@ -30,7 +30,7 @@ export default function PostPageAdd() {
           <Navbar.Brand href="/">Tinkergram</Navbar.Brand>
           <Nav>
             <Nav.Link href="/add">New Post</Nav.Link>
-            <Nav.Link onClick={(e) => signOut(auth)}>🚪</Nav.Link>
+            <Nav.Link onClick={(e) => signOut(auth)}>Sign Out🚪</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
