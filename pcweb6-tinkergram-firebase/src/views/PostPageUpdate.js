@@ -4,8 +4,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, useParams } from "react-router-dom";
 import { auth, db, storage } from "../firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { signOut } from "firebase/auth";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import Navigation from "../components/navigation";
+
 
 export default function PostPageUpdate() {
   const params = useParams();
@@ -41,15 +42,7 @@ export default function PostPageUpdate() {
   }, [id, loading, navigate, user]);
   return (
     <div>
-      <Navbar variant="light" bg="light">
-        <Container>
-          <Navbar.Brand href="/">Tinkergram</Navbar.Brand>
-          <Nav>
-            <Nav.Link href="/add">New Post</Nav.Link>
-            <Nav.Link onClick={(e) => signOut(auth)}>🚪</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <Navigation />
       <Container>
         <h1 style={{ marginBlock: "1rem" }}>Update Post</h1>
         <Form>
