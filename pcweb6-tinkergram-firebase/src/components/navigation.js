@@ -9,7 +9,7 @@ export default function Navigation() {
         <Navbar.Brand href="/">Tinkergram</Navbar.Brand>
         <Nav>
           <Nav.Link href="/add">New Post</Nav.Link>
-          <Nav.Link onClick={(e) => signOut(auth)}>Sign Out</Nav.Link>
+          <Nav.Link onClick={(e) => signOut(auth)} href="/login">Sign Out!</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
